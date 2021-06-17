@@ -2,6 +2,10 @@
   .phone
     &__icon
       display: none
+@media (min-width: 925px)
+  .item
+    &__new
+      display: none
 @media (max-width: 1650px)
   .container
     max-width: 1500px
@@ -39,17 +43,114 @@
   .header
     &__phone
       display: none
+  // .dropdown
+  //   &-language
+  //     right: 60px
+
+@media (max-width: 1135px)
+  .container
+    max-width: 900px
+  .navbar
+    margin-right: 30px
+    &__item
+      font-size: 16px
   .dropdown
+    &-content
+      &__link
+        font-size: 16px
     &-language
-      right: 60px
-// @media (max-width: 1024px)
-// @media (max-width: 992px)
-// @media (max-width: 767px)
-// @media (max-width: 576px)
-// @media (min-width: 320px) and (max-width: 480px)
+      &__link
+        font-size: 14px
+  .language
+    &__lang
+      font-size: 14px
+  .header
+    background-position: 450px -248px
+    background-size: 1300px 1300px
+    &__logo
+      width: 60px
+      height: 40px
+    &-hero
+      padding-right: 100px
+  .hero
+    &__title
+      font-size: 16px
+    &__text
+      font-size: 35px
+      width: 700px
 
+@media (max-width: 925px)
+  .container
+    width: 87.5%
+  .hidden
+    display: none
 
-@media (min-width: 992px)
+@media (max-width: 767px)
+  .container
+    width: 87.5%
+  .navbar
+    display: none
+  .language
+    display: none
+  .header
+    background-position: 450px -248px
+    background-size: 1000px 1000px
+    &__logo
+      width: 73px
+      height: 41px
+    &-hero
+      padding-bottom: 50px
+  .hero
+    &__text
+      font-size: 30px
+      width: 480px
+    &__link
+      display: none
+    &__block
+      margin-bottom: 0
+@media (max-width: 576px)
+  .hero
+    &__title
+      font-size: 14px
+      margin-bottom: 8px
+    &__text
+      font-size: 26px
+      width: 400px
+      line-height: 36px
+  .details
+    width: 122px
+    &__link
+      font-size: 10px
+      line-height: 32px
+      letter-spacing: 0.12em
+    &__line
+      width: 40px
+  .header
+    background: #07070B url('../img/second-image.png')
+    background-repeat: no-repeat
+    background-position: 70px -248px
+  &-hero
+      padding-bottom: 20px
+@media (min-width: 320px) and (max-width: 480px)
+  // .container
+  //   max-width: 284px
+  .header
+    padding-top: 24px
+    background-position: -61px -213px
+    &-hero
+      padding-top: 201px
+      padding-bottom: 16px
+  .hero
+    &__block
+      width: 100%
+    &__text
+      font-size: 24px
+      width: 284px
+      line-height: 28px
+      height: 196px
+      margin-bottom: 16px
+
+@media (min-width: 764px)
   .dropdown
     &-link
       &:hover
@@ -87,3 +188,11 @@
       &__link
         &:hover
           color: #767676
+  .item
+    &__new
+      &:hover .dropdown-new
+        display: block
+  .dropdown
+    &-new
+      &:hover
+        color: #767676
