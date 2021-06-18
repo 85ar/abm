@@ -43,9 +43,6 @@
   .header
     &__phone
       display: none
-  // .dropdown
-  //   &-language
-  //     right: 60px
 
 @media (max-width: 1135px)
   .container
@@ -84,22 +81,67 @@
     width: 87.5%
   .hidden
     display: none
-
-@media (max-width: 767px)
+  .language
+    width: 100px
+@media (max-width: 769px)
+  
   .container
     width: 87.5%
   .navbar
     display: none
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    top: 120px
+    background-color: $secondary
+    width: 100%    
+    &--visible
+      display: block
+      overflow-y: auto
+    &__list
+      flex-direction: column
+      width: 100%
+      padding-top: 20px
+    &__item
+      margin-bottom: 20px
+    &--mobile
+      &-fixed
+        position: fixed
+        width: inherit
+  .active
+    background-color: black
+    left: 0
+    top: 0    
+    padding: 42px
+    width: 100%
+  .dropdown
+    &-content
+      display: block
+      right: -38px
+      position: relative
+      &__link
+        font-size: 14px
   .language
     display: none
+  .phone
+    margin-right: 5px
+    align-items: center
   .header
     background-position: 450px -248px
     background-size: 1000px 1000px
     &__logo
       width: 73px
       height: 41px
+      margin-right: 95px
     &-hero
       padding-bottom: 50px
+    &__info
+      display: flex
+      align-items: center
+    &-wrapper
+      justify-content: space-between
+
   .hero
     &__text
       font-size: 30px
@@ -108,6 +150,41 @@
       display: none
     &__block
       margin-bottom: 0
+    &--mobile
+      &-fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+      &--hidden
+        display: none
+      &--visible
+        display: flex
+        margin: auto
+    &-menu
+      flex-direction: column
+      padding-top: 0
+      &__item
+        &--mobile
+          &--visible
+            display: block
+  .menu
+    &-button
+      display: flex
+      width: 20px
+      height: 16px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      border: none
+      background-color: transparent
+      cursor: pointer
+      &__line
+        width: 20px
+        height: 1px
+        background-color: white
 @media (max-width: 576px)
   .hero
     &__title
@@ -132,8 +209,6 @@
   &-hero
       padding-bottom: 20px
 @media (min-width: 320px) and (max-width: 480px)
-  // .container
-  //   max-width: 284px
   .header
     padding-top: 24px
     background-position: -61px -213px
@@ -149,20 +224,21 @@
       line-height: 28px
       height: 196px
       margin-bottom: 16px
-
+  .navbar
+    top: 85px
 @media (min-width: 764px)
   .dropdown
     &-link
       &:hover
-        color: #767676
+        color: $secondary
         .navbar__icon
-          fill: #767676
+          fill: $secondary
           stroke: #b92626
 
     &-content
       &__link
         &:hover
-          color: #767676
+          color: $secondary
   .navbar
     &__item
       &--dropdown
@@ -171,11 +247,11 @@
   .header
     &__phone
       &:hover
-        color: #767676
+        color: $secondary
   .details
     &__link
       &:hover
-        color: #767676
+        color: $secondary
   .hero
     &__next
       &:hover
@@ -187,7 +263,7 @@
     &-language
       &__link
         &:hover
-          color: #767676
+          color: $secondary
   .item
     &__new
       &:hover .dropdown-new
@@ -195,4 +271,4 @@
   .dropdown
     &-new
       &:hover
-        color: #767676
+        color: $secondary

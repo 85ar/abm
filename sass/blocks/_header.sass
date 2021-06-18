@@ -3,6 +3,9 @@
   background: #07070B url('../img/main-image.png')
   background-repeat: no-repeat
   background-position: 698px -248px
+  &__info
+    display: flex
+    align-items: end
   &__logo
     width: 120px
     height: 66px
@@ -11,18 +14,17 @@
     font-weight: normal
     font-size: 18px
     line-height: 32px
-    color: #FFFFFF
+    color: $primary
   &__search
     background: transparent
   &-wrapper
     display: flex
-    align-items: end
+    align-items: flex-start
   &-hero
     padding: 164px 994px 92px 0
   &-phone-search
     display: flex
     justify-content: space-between
-    align-items: center
     width: 266px
     margin-right: 54px
 .navbar
@@ -39,9 +41,33 @@
     font-weight: normal
     font-size: 18px
     line-height: 32px
-    color: #FFFFFF
+    color: $primary
   &__icon
     margin-left: 8px
+  &-menu
+    list-style: none
+    margin: 0
+    padding: 31px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: white
+    &__link
+      position: relative
+      color: inherit
+      text-decoration: none
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 18px
+      font-style: normal
+      font-weight: bold
+    &__item
+      &--mobile
+        &--visible
+          display: none
+  &-top
+    &__menu-button
+      display: none
 .language
   width: 77px
   display: flex
@@ -53,7 +79,7 @@
     font-weight: normal
     font-size: 16px
     line-height: 32px
-    color: #FFFFFF
+    color: $primary
 .dropdown
   &-content
     display: none
@@ -64,7 +90,7 @@
       font-weight: normal
       font-size: 18px
       line-height: 40px
-      color: #FFFFFF
+      color: $primary
   &-language
     display: none
     position: absolute
@@ -75,4 +101,4 @@
       font-weight: normal
       font-size: 18px
       line-height: 40px
-      color: #FFFFFF
+      color: $primary
